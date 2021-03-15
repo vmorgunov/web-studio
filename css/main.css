@@ -595,25 +595,25 @@ a {
 .subscribe__input::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.2;
-  color: var(--contact-footer-logo);
+  color: var(--contacts-color-footer);
 }
 
 .subscribe__input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.2;
-  color: var(--contact-footer-logo);
+  color: var(--contacts-color-footer);
 }
 
 .subscribe__input::-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.2;
-  color: var(--contact-footer-logo);
+  color: var(--contacts-color-footer);
 }
 
 .subscribe__input::placeholder {
   font-size: 16px;
   line-height: 1.2;
-  color: var(--contact-footer-logo);
+  color: var(--contacts-color-footer);
 }
 
 .subcribe__btn {

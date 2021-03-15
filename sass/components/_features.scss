@@ -1,0 +1,36 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--bg-color-team);
+    border-radius: 4px;
+  }
+}

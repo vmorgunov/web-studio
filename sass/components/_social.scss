@@ -1,0 +1,39 @@
+.social {
+  margin-left: 83px;
+}
+
+.social__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  display: block;
+  height: 44px;
+  padding: 12px 12px;
+  border-radius: 50%;
+  color: var(--white-color);
+  background-color: var(--social-link-bg);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--acent-color);
+  }
+}
+
+.social__icon {
+  fill: currentColor;
+}

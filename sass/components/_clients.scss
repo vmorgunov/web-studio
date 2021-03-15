@@ -1,0 +1,39 @@
+.clients {
+  padding-top: 88px;
+  padding-bottom: 100px;
+
+  &__title {
+    @extend %title;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  color: var(--social-link-color);
+  border: 1px solid var(--social-link-color);
+  border-radius: 4px;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--acent-color);
+    border-color: var(--acent-color);
+  }
+}

@@ -1,0 +1,3 @@
+@mixin transition($type) {
+  transition: $type 250ms var(--timing-fn);
+}

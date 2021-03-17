@@ -4,8 +4,24 @@
 }
 
 .page-footer__container {
+  // display: flex;
+  // align-items: baseline;
+}
+
+.contacts-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts-footer {
+  margin-bottom: 60px;
+}
+
+.contacts-footer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contacts-footer__item:not(:last-child) {

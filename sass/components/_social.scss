@@ -1,5 +1,9 @@
 .social {
-  margin-left: 83px;
+  // margin-left: 83px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .social__title {

@@ -1,0 +1,192 @@
+<footer class="page-footer">
+  <div class="container page-footer__container">
+    <div class="contacts__container">
+      <a class="logo page-footer__logo" href="./index.html" lang="en"
+        ><span class="logo__text">Web</span>Studio</a
+      >
+      <address class="contacts-footer" id="contacts">
+        <ul class="contacts-footer__list">
+          <li class="contacts-footer__item">
+            <a
+              class="contacts-footer__maps"
+              href="https://www.google.com/maps/place/Lesi+Ukrainky+Blvd,+26,+Kyiv,+Ukraine,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+              target="_blank"
+              rel="noreferrer noopener"
+              >г. Киев, пр-т Леси Украинки, 26</a
+            >
+          </li>
+          <li class="contacts-footer__item">
+            <a class="contacts-footer__link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-footer__item">
+            <a class="contacts-footer__link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </address>
+    </div>
+
+    <!-- JOIN TO OUR SOCIAL NETWORK  -->
+
+    <div class="social">
+      <h3 class="social__title">присоединяйтесь</h3>
+      <ul class="social__list">
+        <li class="social__item">
+          <a
+            class="social__link"
+            href="https://www.instagram.com/"
+            title="Instragram"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social__icon" width="20" height="20">
+              <use href="./images/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a
+            class="social__link"
+            href="https://twitter.com/"
+            title="Twitter"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social__icon" width="20" height="20">
+              <use href="./images/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a
+            class="social__link"
+            href="https://www.facebook.com/"
+            title="Facebook"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social__icon" width="20" height="20">
+              <use href="./images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a
+            class="social__link"
+            href="https://www.linkedin.com/"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <svg class="social__icon" width="20" height="20">
+              <use href="./images/sprite.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SUBSCRIBE PAGE -->
+
+    <div class="subscribe">
+      <h3 class="subscribe__title">Подпишитесь на рассылку</h3>
+      <form class="subscribe__form">
+        <input
+          type="email"
+          name="email"
+          class="subscribe__input"
+          placeholder="E-mail"
+        />
+        <button type="submit" class="subcribe__btn">
+          Подписаться
+          <svg class="subscribe__icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-send"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__btn" data-modal-close>
+      <svg class="modal__icon" width="18" height="18">
+        <use href="./images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <!-- Form for modal -->
+
+    <form class="modal-form">
+      <h3 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h3>
+      <label class="modal-form__label"
+        >Имя
+        <input
+          type="text"
+          name="name"
+          class="modal-form__input"
+          placeholder=" "
+        />
+        <svg class="modal-form__icon" width="12" height="12">
+          <use href="./images/sprite.svg#icon-human"></use>
+        </svg>
+      </label>
+
+      <label class="modal-form__label"
+        >Телефон
+        <input
+          type="tel"
+          name="tel"
+          class="modal-form__input"
+          placeholder=" "
+        />
+        <svg class="modal-form__icon" width="12" height="12">
+          <use href="./images/sprite.svg#icon-phone"></use>
+        </svg>
+      </label>
+
+      <label class="modal-form__label"
+        >Почта
+        <input
+          type="email"
+          name="email"
+          class="modal-form__input"
+          placeholder=" "
+        />
+        <svg class="modal-form__icon" width="12" height="12">
+          <use href="./images/sprite.svg#icon-fmail"></use>
+        </svg>
+      </label>
+
+      <label for="comment" class="modal-form__label">Комментарий</label>
+      <textarea
+        class="modal-form__area"
+        name="comment"
+        id="comment"
+        rows="5"
+        placeholder="Введите текст"
+      ></textarea>
+      <div class="policy">
+        <input
+          type="checkbox"
+          name="agreements"
+          id="policy"
+          class="policy__input visually-hidden"
+        />
+        <label for="policy" class="policy__label">
+          Соглашаюсь с рассылкой и принимаю
+          <a class="policy__link" href="#">Условия договора</a>
+        </label>
+      </div>
+      <button class="modal-form__btn" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>

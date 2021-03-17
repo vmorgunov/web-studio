@@ -81,11 +81,27 @@ a {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .page-header {
@@ -215,26 +231,55 @@ a {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
-  padding: 200px 0;
+  min-height: 400px;
+  padding: 118px 0;
   margin: 0 auto;
   text-align: center;
   background-color: var(--bg-color-acent);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-desktop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-desktop.jpg);
+    height: 600px;
+    padding: 200px 0;
+  }
+}
+
 .hero__title {
-  width: 696px;
   margin: 0 auto 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.5;
+  font-size: 26px;
+  line-height: 1.6;
   color: var(--white-color);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.5;
+    width: 696px;
+  }
 }
 
 .hero__btn {
@@ -245,8 +290,14 @@ a {
 }
 
 .features {
-  padding-top: 94px;
   padding-bottom: 94px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+  }
 }
 
 .features__title {
@@ -255,16 +306,50 @@ a {
   font-size: 14px;
   line-height: 1.1;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
-.features__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+.features__item {
+  width: 100%;
+}
+
+.features__item::not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: 354px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .features__item::not(:last-child) {
+    margin-bottom: unset;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 
 .features__text {
@@ -414,7 +499,7 @@ a {
 .team-social__link {
   display: block;
   height: 44px;
-  padding: 12px 12px;
+  padding: 12px;
   border-radius: 50%;
   color: var(--social-link-color);
   -webkit-transition: background-color 250ms var(--timing-fn);

@@ -290,13 +290,13 @@ a {
 }
 
 .features {
-  padding-bottom: 94px;
   padding-top: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .features {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -376,6 +376,13 @@ a {
 
 .services {
   padding-bottom: 94px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    display: block;
+  }
 }
 
 .services__title {

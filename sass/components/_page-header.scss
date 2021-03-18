@@ -5,6 +5,10 @@
 .page-header__container {
   display: flex;
   align-items: center;
+
+  @media screen and(min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .page-header__nav {

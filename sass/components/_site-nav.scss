@@ -1,5 +1,10 @@
 .site-nav {
-  display: flex;
+  // display: flex;
+  display: none;
+
+  @media screen and(min-width: 768px) {
+    display: flex;
+  }
 }
 
 .site-nav__item:not(:last-child) {

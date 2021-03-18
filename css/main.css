@@ -3,7 +3,7 @@
   --secondary-text-color: rgb(117, 117, 117);
   --acent-color: rgb(33, 150, 243);
   --white-color: rgb(255, 255, 255);
-  --bg-color-team: rgb(245, 244, 250);
+  --bg-color-team: rgba(245, 244, 250, 1);
   --bg-color-acent: rgb(47, 48, 58);
   --contacts-color-footer: rgba(255, 255, 255, 0.6);
   --social-link-color: rgb(175, 177, 184);
@@ -461,11 +461,6 @@ a {
 .services__thumb {
   position: relative;
   overflow: hidden;
-}
-
-.services__img {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .services-desc {
@@ -1235,24 +1230,52 @@ a {
 }
 
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 94px 0;
+  }
 }
 
 .portfolio__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 50px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__btn {
@@ -1262,7 +1285,7 @@ a {
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  border-color: var(--bg-color-team);
+  background-color: var(--bg-color-team);
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -1277,19 +1300,19 @@ a {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.gallery__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -30px 0 0 -30px;
+@media screen and (min-width: 768px) {
+  .gallery__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+  }
 }
 
 .gallery__item {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin: 30px 0 0 30px;
   cursor: pointer;
 }
 
@@ -1303,10 +1326,48 @@ a {
           transform: translateY(0);
 }
 
+@media screen and (max-width: 767px) {
+  .gallery__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: unset;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .gallery__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
 .gallery-container {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .gallery-container__title {
@@ -1330,8 +1391,7 @@ a {
 }
 
 .gallery__img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
 
 .overlay {
@@ -1341,8 +1401,8 @@ a {
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   -webkit-transition: -webkit-transform 250ms var(--timing-fn);
   transition: -webkit-transform 250ms var(--timing-fn);
   transition: transform 250ms var(--timing-fn);

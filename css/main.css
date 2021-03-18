@@ -964,8 +964,8 @@ a {
   top: 50%;
   left: 50%;
   padding: 40px;
-  max-height: 581px;
-  max-width: 528px;
+  width: 450px;
+  height: 609px;
   background-color: var(--white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -976,6 +976,19 @@ a {
   transition: -webkit-transform 250ms var(--timing-fn);
   transition: transform 250ms var(--timing-fn);
   transition: transform 250ms var(--timing-fn), -webkit-transform 250ms var(--timing-fn);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 581px;
+    width: 528px;
+  }
 }
 
 .modal__btn {
@@ -1016,6 +1029,13 @@ a {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    text-align: left;
+  }
 }
 
 .modal-form__label {
@@ -1056,8 +1076,8 @@ a {
   left: 12px;
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   fill: var(--primary-text-color);
   -webkit-transition: fill 250ms var(--timing-fn);
   transition: fill 250ms var(--timing-fn);
@@ -1112,13 +1132,19 @@ a {
 
 .policy {
   margin-top: 20px;
-  padding-left: 12px;
-  padding-right: 7px;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy {
+    padding-left: 12px;
+    padding-right: 7px;
+  }
 }
 
 .policy__link {
-  margin-left: 5px;
+  margin-left: 2px;
   color: var(--acent-color);
+  text-decoration: underline;
 }
 
 .policy__label {
@@ -1132,8 +1158,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.2;
   color: var(--secondary-text-color);
 }
 
@@ -1142,9 +1168,16 @@ a {
   display: inline-block;
   width: 16px;
   height: 15px;
-  margin-right: 8px;
+  margin-right: 5px;
   border-radius: 2px;
   border: 2px solid var(--primary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .policy__label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .policy__input:checked + .policy__label::before {

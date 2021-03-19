@@ -1073,8 +1073,8 @@ a {
 
 .modal__icon {
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 1px;
+  right: 1px;
 }
 
 .modal__icon:hover {

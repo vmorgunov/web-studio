@@ -1,8 +1,6 @@
 .hero {
   max-width: 1600px;
-  // height: 600px;
   min-height: 400px;
-  // padding: 200px 0;
   padding: 118px 0;
   margin: 0 auto;
   text-align: center;
@@ -37,11 +35,8 @@
   }
 
   &__title {
-    // width: 696px;
     margin: 0 auto 30px;
     font-weight: 900;
-    // font-size: 44px;
-    // line-height: 1.5;
     font-size: 26px;
     line-height: 1.6;
     color: var(--white-color);

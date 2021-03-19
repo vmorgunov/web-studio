@@ -56,8 +56,8 @@
 
 .modal__icon {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -1px;
+  right: -1px;
 
   &:hover {
     fill: var(--acent-color);

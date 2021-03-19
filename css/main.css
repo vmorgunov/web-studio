@@ -12,6 +12,7 @@
   --backdrop-bg: rgba(0, 0, 0, 0.2);
   --overlay-bg: rgba(33, 150, 243, 0.9);
   --social-link-bg: rgba(255, 255, 255, 0.1);
+  --divider: rgba(33, 33, 33, 0.2);
 }
 
 .services__title, .team__title, .clients__title {
@@ -110,6 +111,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -147,8 +149,10 @@ a {
   color: var(--acent-color);
 }
 
-.page-header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .page-header__logo {
+    margin-right: 93px;
+  }
 }
 
 .page-footer__logo {
@@ -753,7 +757,7 @@ a {
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .contacts-footer {
     margin-bottom: unset;
   }
@@ -816,12 +820,17 @@ a {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .social {
+    margin-bottom: unset;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .social {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-bottom: unset;
   }
 }
 
@@ -874,6 +883,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-top: unset;
+  }
 }
 
 .subscribe__title {
@@ -1052,8 +1073,8 @@ a {
 
 .modal__icon {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -1px;
+  right: -1px;
 }
 
 .modal__icon:hover {
@@ -1415,5 +1436,126 @@ a {
   font-size: 18px;
   line-height: 1.5;
   color: var(--white-color);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 45px;
+  background-color: var(--white-color);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: var(--acent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mobile-nav__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.mobile-nav__link:hover, .mobile-nav__link:focus {
+  color: var(--acent-color);
+}
+
+.mobile-contacts {
+  position: absolute;
+  bottom: 134px;
+  left: 40px;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.mobile-contacts__link--acent {
+  color: var(--acent-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+.mobile-social {
+  position: absolute;
+  bottom: 48px;
+  left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobile-social__item:not(:last-child)::after {
+  content: '';
+  border: 1px solid var(--divider);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 0 10px;
+}
+
+.mobile-social__link {
+  color: var(--acent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 420px) {
+  .mobile-social {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=main.css.map */

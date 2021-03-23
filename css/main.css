@@ -159,6 +159,7 @@ a {
   display: block;
   margin-bottom: 20px;
   color: var(--white-color);
+  padding: 0;
 }
 
 .site-nav {
@@ -429,6 +430,12 @@ a {
   font-size: 14px;
   line-height: 1.7;
   color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  .features__text {
+    margin-bottom: 30px;
+  }
 }
 
 .features__container {

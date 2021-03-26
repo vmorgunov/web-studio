@@ -15,7 +15,6 @@
   background-size: cover;
 
   @media screen and (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: linear-gradient(
@@ -34,7 +33,6 @@
       url(../images/hero-bg-tablet.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: linear-gradient(
@@ -57,7 +55,6 @@
     padding: 200px 0;
 
     @media screen and (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: linear-gradient(

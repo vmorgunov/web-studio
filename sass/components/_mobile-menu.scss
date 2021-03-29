@@ -53,7 +53,7 @@
 .mobile-contacts {
   position: absolute;
   bottom: 134px;
-  left: 40px;
+  left: 45px;
 
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -79,7 +79,7 @@
 .mobile-social {
   position: absolute;
   bottom: 48px;
-  left: 40px;
+  left: 45px;
   display: flex;
 
   &__item:not(:last-child)::after {

@@ -85,7 +85,6 @@ a {
   max-width: 480px;
   margin: 0 auto;
   padding: 0 15px;
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1552,7 +1551,7 @@ a {
 .mobile-contacts {
   position: absolute;
   bottom: 134px;
-  left: 40px;
+  left: 45px;
 }
 
 .mobile-contacts__item:not(:last-child) {
@@ -1578,7 +1577,7 @@ a {
 .mobile-social {
   position: absolute;
   bottom: 48px;
-  left: 40px;
+  left: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
